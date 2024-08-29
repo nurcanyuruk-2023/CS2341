@@ -1,1 +1,5 @@
-Source code for hands-on sessions and lab assignments can be found here.
+Week-1 
+Compile and run java in IntelliJ 
+Compile and run java from command line 
+Include jar file into an existing project (define a dependency in IntelliJ)
+Compile and run with jar file
