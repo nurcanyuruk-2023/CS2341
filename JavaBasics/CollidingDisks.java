@@ -7,10 +7,6 @@
  *
  ******************************************************************************/
 
-import edu.princeton.cs.algs4.CollisionSystem;
-import edu.princeton.cs.algs4.Particle;
-import edu.princeton.cs.algs4.StdDraw;
-
 public class CollidingDisks {
     public static void main(String[] args) {
         int n = 20;  // number of particles (default 20)
