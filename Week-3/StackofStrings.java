@@ -1,23 +1,53 @@
-//resizing-array implementation
 public class StackofStrings {
 
-    private String[] s = new String[1];
-    private int N=0;
-
-    public void push(String item)
-    {
-        if (N == s.length) resize(2 * s.length);
-        s[N++] = item;
+    private class Node{
+        String item;
+        Node next;
     }
+    Node first;
+    Node last;
 
+
+    // add to the beginning of the list
+    public void push(String item){
+        Node oldfirst = first;
+
+        first = new Node();
+        first.item = item;
+        first.next = oldfirst;
+    }
+    // remove from the beginning
     public String pop(){
-        return s[--N];
+        String removedItem = first.item;
+        first = first.next;
+        return removedItem;
     }
-    private void resize(int capacity)
-    {
-        String[] copy = new String[capacity];
-        for (int i = 0; i < N; i++)
-            copy[i] = s[i];
-        s = copy;
+
+    public void display(){
+        Node current = first;
+        while(current != null){
+            System.out.println(current.item);
+            current = current.next;
+        }
     }
+
+    public static void main(String[] args) {
+        StackofStrings list = new StackofStrings();
+
+        list.push("one");
+        list.push("two");
+        list.push("three");
+        list.push("four");
+
+        list.display();
+
+        String removedItem = list.pop();
+        System.out.println(removedItem + " is removed");
+        list.display();
+
+
+    }
+
+
+
 }
