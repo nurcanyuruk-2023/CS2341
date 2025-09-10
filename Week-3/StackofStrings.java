@@ -1,3 +1,4 @@
+// linked-list implementation
 public class StackofStrings {
 
     private class Node{
